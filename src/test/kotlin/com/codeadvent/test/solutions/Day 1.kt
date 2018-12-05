@@ -13,7 +13,9 @@ class Day1 {
     fun `Day 1 - Part 2`() {
         val x = mutableListOf<Int>()
         var freq = 0
-        while (true) { values.forEach { freq += it; if (check(x, freq)) return } }
+        while (true) {
+            values.forEach { freq += it; if (check(x, freq)) return }
+        }
     }
 }
 
