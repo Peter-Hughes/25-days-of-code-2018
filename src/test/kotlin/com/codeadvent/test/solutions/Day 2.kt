@@ -23,16 +23,8 @@ fun countForString(s: String, amount: Int): Int {
     return 0
 }
 
-fun almostMatch(a: String, b: String): Boolean {
+fun almostMatch(a: String, b: String) {
     var i = -1
-    a.forEachIndexed { index, c ->
-        if (c != b[index]) if (i > -1) return false else i = index
-    }
-
-    when (i) {
-        -1 -> return false
-        else -> println(a.substring(0, i) + a.substring(i + 1, a.length))
-    }
-
-    return true
+    a.forEachIndexed { index, c -> if (c != b[index]) if (i > -1) return else i = index }
+    if(i != -1) println(a.substring(0, i) + a.substring(i + 1, a.length))
 }
